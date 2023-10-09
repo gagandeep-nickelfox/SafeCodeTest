@@ -31,6 +31,6 @@ danger(args) {
             warn("PR is classed as Work in Progress")
         }
 
-        AndroidLint.report("app/build/reports/lint-results-debug.html")
+        AndroidLint.report("app/build/reports/lint-results-debug.xml")
     }
 }
