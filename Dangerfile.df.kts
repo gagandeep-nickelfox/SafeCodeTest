@@ -30,7 +30,7 @@ danger(args) {
         if (pullRequest.title.contains("WIP", false)) {
             warn("PR is classed as Work in Progress")
         }
-
-        AndroidLint.report("app/build/reports/lint-results-debug.xml")
     }
+
+    AndroidLint.report("app/build/reports/lint-results-debug.xml")
 }
