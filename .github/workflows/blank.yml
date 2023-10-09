@@ -19,13 +19,15 @@ jobs:
     name: "Run Danger"
     steps:
       - uses: actions/checkout@v1
+
+        # Run Linting
+      - name: Run gradle lint
+        run: ./gradlew lint
+
+        # Run Danger
       - name: Danger
         uses: docker://ghcr.io/danger/danger-kotlin:1.2.0
         with:
             args: --failOnErrors --failOnWarnings --no-publish-check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
