@@ -3,6 +3,7 @@
 
 import systems.danger.kotlin.*
 import org.apache.commons.text.WordUtils
+import com.gianluz.dangerkotlin.androidlint.AndroidLint
 
 register plugin AndroidLint
 
