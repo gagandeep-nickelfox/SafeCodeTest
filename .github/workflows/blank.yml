@@ -15,7 +15,6 @@ on:
 
 jobs:
   build:
-    permissions: write-all
     runs-on: ubuntu-latest
     name: "Run Danger"
     steps:
