@@ -1,4 +1,7 @@
+@file:DependsOn("org.apache.commons:commons-text:1.6")
+
 import systems.danger.kotlin.*
+import org.apache.commons.text.WordUtils
 
 danger(args) {
 
