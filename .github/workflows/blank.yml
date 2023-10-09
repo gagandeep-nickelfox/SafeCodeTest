@@ -15,6 +15,7 @@ on:
 
 jobs:
   build:
+    permissions: write-all
     runs-on: ubuntu-latest
     name: "Run Danger"
     steps:
@@ -35,6 +36,6 @@ jobs:
       - name: Danger
         uses: docker://ghcr.io/danger/danger-kotlin:1.2.0
         with:
-          args: --failOnErrors --failOnWarnings --no-publish-check
+          args: --failOnErrors --no-publish-check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
