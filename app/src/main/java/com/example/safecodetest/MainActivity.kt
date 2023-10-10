@@ -2,6 +2,7 @@ package com.example.safecodetest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +14,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val a = "sdf".toUpperCase()
+        val a = "sdf".uppercase(Locale.ROOT)
     }
 }
