@@ -15,11 +15,11 @@ danger(args) {
     onGitHub {
 
         // Big PR Check
-//        if ((pullRequest.additions ?: 0) - (pullRequest.deletions ?: 0) > 10) {
-//            warn("Big PR, try to keep changes smaller if you can")
-//        }
+        if ((pullRequest.additions ?: 0) - (pullRequest.deletions ?: 0) > 10) {
+            warn("Big PR, try to keep changes smaller if you can")
+        }
 
     }
 
-    AndroidLint.report("app/build/reports/lint-results-debug.xml")
+//    AndroidLint.report("app/build/reports/lint-results-debug.xml")
 }
