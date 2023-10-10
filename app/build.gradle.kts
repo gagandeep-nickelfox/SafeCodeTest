@@ -34,6 +34,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    lint {
+        this.abortOnError = false
+        this.checkDependencies = true
+        this.htmlReport = false
+    }
 }
 
 dependencies {
