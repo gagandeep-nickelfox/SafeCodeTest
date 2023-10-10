@@ -34,11 +34,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
     lint {
-        this.abortOnError = false
-        this.checkDependencies = true
-        this.htmlReport = false
+        this.checkAllWarnings = true
+        this.warningsAsErrors = true
+        this.checkGeneratedSources = false
+
+        enable += "Deprecated"
     }
 }
 
