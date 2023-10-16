@@ -14,6 +14,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val a = "sdf".uppercase(Locale.ROOT)
+        val a = "sdf".toUpperCase()
     }
 }
