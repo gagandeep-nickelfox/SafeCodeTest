@@ -37,6 +37,8 @@ android {
     lint {
         this.checkAllWarnings = true
         this.checkGeneratedSources = false
+        this.warningsAsErrors = true
+        this.abortOnError = true
 
         enable += "Deprecated"
     }
