@@ -18,5 +18,6 @@ danger(args) {
 
     }
     AndroidLint.report("app/build/reports/lint-results-debug.xml")
+
 }
 
