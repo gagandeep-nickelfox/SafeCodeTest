@@ -5,12 +5,13 @@ plugins {
 
 android {
     namespace = "com.example.safecodetest"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.safecodetest"
         minSdk = 24
-        targetSdk = 33
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,13 +34,21 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    lint {
+        this.checkAllWarnings = true
+        this.checkGeneratedSources = false
+        this.warningsAsErrors = true
+        this.abortOnError = true
+
+        enable += "Deprecated"
+    }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
